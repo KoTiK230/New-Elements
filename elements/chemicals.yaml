@@ -1,0 +1,947 @@
+---
+elements:
+
+  - elementId: FrozenNitrogen
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidNitrogen
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.FROZENNITROGEN.NAME
+    dlcId: ""
+
+  - elementId: LiquidNitrogen
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: Nitrogen
+    lowTempTransitionTarget: FrozenNitrogen
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDNITROGEN.NAME
+    dlcId: ""
+
+  - elementId: Nitrogen
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidNitrogen
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.NITROGEN.NAME
+    dlcId: ""
+  - elementId: FrozenFluorine
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidFluorine
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.FROZENFLUORINE.NAME
+    dlcId: ""
+
+  - elementId: LiquidFluorine
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: Fluorine
+    lowTempTransitionTarget: FrozenFluorine
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDFLUORINE.NAME
+    dlcId: "" 
+    
+  - elementId: Fluorine
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidFluorine
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.FLUORINE.NAME
+    dlcId: ""
+
+  - elementId: SolidSulfurTrioxide
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidSulfurTrioxide
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.SOLIDSULFURTRIOXIDE.NAME
+    dlcId: ""
+
+  - elementId: LiquidSulfurTrioxide
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: SulfurTrioxide
+    lowTempTransitionTarget: SolidSulfurTrioxide
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDSULFURTRIOXIDE.NAME
+    dlcId: ""
+
+  - elementId: SulfurTrioxide
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidSulfurTrioxide
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.SULFURTRIOXIDE.NAME
+    dlcId: ""
+
+  - elementId: FrozenNitricAcid
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: NitricAcid
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.FROZENNITRICACID.NAME
+    dlcId: ""
+
+  - elementId: NitricAcid
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: NitrogenDioxide
+    lowTempTransitionTarget: FrozenNitricAcid
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.NITRICACID.NAME
+    dlcId: "" 
+
+  - elementId: FrozenNitrogenDioxide
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidNitrogenDioxide
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.FROZENNITROGENDIOXIDE.NAME
+    dlcId: ""
+
+  - elementId: LiquidNitrogenDioxide
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: NitrogenDioxide
+    lowTempTransitionTarget: FrozenNitrogenDioxide
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDNITROGENDIOXIDE.NAME
+    dlcId: "" 
+    
+  - elementId: NitrogenDioxide
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidNitrogenDioxide
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.NITROGENDIOXIDE.NAME
+    dlcId: ""
+  - elementId: FrozenSulfuricAcid
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 280
+    highTempTransitionTarget: SulfuricAcid
+    defaultTemperature: 200
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.FROZENSULFURICACID.NAME
+    dlcId: ""
+
+  - elementId: SulfuricAcid
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 580
+    lowTemp: 280
+    highTempTransitionTarget: SulfurTrioxide
+    lowTempTransitionTarget: FrozenSulfuricAcid
+    defaultTemperature: 300
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.SULFURICACID.NAME
+    dlcId: "" 
+  - elementId: FrozenHeavyOil
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 310
+    highTempTransitionTarget: HeavyOil
+    defaultTemperature: 300
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.FROZENHEAVYOIL.NAME
+    dlcId: ""
+
+  - elementId: HeavyOil
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 600
+    lowTemp: 310
+    highTempTransitionTarget: FrozenHeavyOil
+    lowTempTransitionTarget: SourGas
+    defaultTemperature: 400
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.HEAVYOIL.NAME
+    dlcId: "" 
+  - elementId: PolymerResin
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 450
+    highTempTransitionTarget: Naphtha
+    defaultTemperature: 300
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.POLYMERRESIN.NAME
+    dlcId: ""
+  - elementId: Rubber
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 450
+    highTempTransitionTarget: Naphtha
+    defaultTemperature: 300
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.RUBBER.NAME
+    dlcId: ""
+  - elementId: Plutonium
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 400
+    highTempTransitionTarget: LiquidPlutonium
+    defaultTemperature: 300
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.PLUTONIUM.NAME
+    dlcId: EXPANSION1_ID
+
+  - elementId: LiquidPlutonium
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 600
+    lowTemp: 400
+    highTempTransitionTarget: RockGas
+    lowTempTransitionTarget: Plutonium
+    defaultTemperature: 1000
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDPLUTONIUM.NAME
+    dlcId: EXPANSION1_ID 
+  - elementId: FrozenAmmonia
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidAmmonia
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.FROZENAMMONIA.NAME
+    dlcId: ""
+
+  - elementId: LiquidAmmonia
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: Ammonia
+    lowTempTransitionTarget: FrozenAmmonia
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDAMMONIA.NAME
+    dlcId: ""
+
+  - elementId: Ammonia
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidAmmonia
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.AMMONIA.NAME
+    dlcId: ""
+  - elementId: Nickel
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidNickel
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.NICKEL.NAME
+    dlcId: ""
+  - elementId: NickelOre
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidNickel
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.NICKELORE.NAME
+    dlcId: ""
+
+  - elementId: LiquidNickel
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: GasNickel
+    lowTempTransitionTarget: Nickel
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDNICKEL.NAME
+    dlcId: ""
+
+  - elementId: GasNickel
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidNickel
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.GASNICKEL.NAME
+    dlcId: ""
+  - elementId: Iridium
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidIridium
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.IRIDIUM.NAME
+    dlcId: ""
+
+  - elementId: LiquidIridium
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: GasIridium
+    lowTempTransitionTarget: Iridium
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDIRIDIUM.NAME
+    dlcId: ""
+
+  - elementId: GasIridium
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidIridium
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.GASIRIDIUM.NAME
+    dlcId: ""
+  - elementId: Katherium
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidKatherium
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.KATHERIUM.NAME
+    dlcId: ""
+  - elementId: KatheriumOre
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidKatherium
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.KATHERIUMORE.NAME
+    dlcId: ""
+
+  - elementId: LiquidKatherium
+    specificHeatCapacity: 0.1291
+    thermalConductivity: 7
+    liquidCompression: 1.01
+    speed: 100
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 25
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.7
+    highTemp: 200
+    lowTemp: 100
+    highTempTransitionTarget: GasKatherium
+    lowTempTransitionTarget: Katherium
+    defaultTemperature: 150
+    defaultMass: 870
+    maxMass: 9970
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    tags:
+    buildMenuSort: 16
+    isDisabled: false
+    state: Liquid
+    localizationID: STRINGS.ELEMENTS.LIQUIDKATHERIUM.NAME
+    dlcId: ""
+
+  - elementId: GasKatherium
+    specificHeatCapacity: 0.223
+    thermalConductivity: 1
+    solidSurfaceAreaMultiplier: 25
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    flow: 0.1
+    lowTemp: 200
+    toxicity: 0
+    lowTempTransitionTarget: LiquidKatherium
+    defaultTemperature: 300
+    molarMass: 107.86
+    lightAbsorptionFactor: 0.5
+    radiationAbsorptionFactor: 0.3
+    radiationPer1000Mass: 0
+    materialCategory: Unbreathable
+    tags:
+    - Toxic
+    buildMenuSort: 17
+    isDisabled: false
+    state: Gas
+    localizationID: STRINGS.ELEMENTS.GASKATHERIUM.NAME
+    dlcId: ""
+  - elementId: KatheriumAlloy
+    specificHeatCapacity: 0.387
+    thermalConductivity: 60
+    solidSurfaceAreaMultiplier: 1
+    liquidSurfaceAreaMultiplier: 1
+    gasSurfaceAreaMultiplier: 1
+    strength: 0.3
+    highTemp: 100
+    highTempTransitionTarget: LiquidKatherium
+    defaultTemperature: 50
+    defaultMass: 870
+    maxMass: 9970
+    hardness: 2
+    molarMass: 107.86
+    lightAbsorptionFactor: 1
+    radiationAbsorptionFactor: 0.5
+    radiationPer1000Mass: 0
+    materialCategory: Liquifiable
+    tags:
+    - BuildableAny
+    buildMenuSort: 15
+    isDisabled: false
+    state: Solid
+    localizationID: STRINGS.ELEMENTS.KATHERIUMALLOY.NAME
+    dlcId: ""

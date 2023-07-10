@@ -1,0 +1,24 @@
+biomeNoise: noise/subworldAcid
+temperatureRange: HumanHot
+density:
+  min: 20
+  max: 25
+avoidRadius: 20.0
+minChildCount: 6
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: rocky
+features:
+  - type: expansion1::features/wasteland/OxyliteBlob
+biomes:
+  - name: biomes/acid/Acid
+    tags:
+tags:
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+  - StartWorld
+  - SwapLakesToBelow
+centralFeature:
+  type: features/generic/StartLocation
+zoneType: Sandstone

@@ -1,0 +1,198 @@
+name: STRINGS.WORLDS.OILRICHWARPTARGET.NAME
+description: STRINGS.WORLDS.OILRICHWARPTARGET.DESCRIPTION
+nameTables: [ FOREST, OILY ]
+asteroidIcon: asteroid_swamp_teleport_kanim
+iconScale: 0.6
+
+worldTraitScale: 0.44 # Adjust with worldSize. Traits are tuned to base game world sizes.
+worldsize:
+  X: 120
+  Y: 360
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    OverworldDensityMin: 18
+    OverworldDensityMax: 18
+    OverworldSampleBehaviour: PoissonDisk
+  startingWorldElements: [] # remove the algae check
+
+startSubworldName: subworlds/acid/AcidStart
+startingBaseTemplate: bases/forestBase
+startingBasePositionHorizontal:
+  min: 0.5
+  max: 0.5
+startingBasePositionVertical:
+  min: 0.30
+  max: 0.30
+
+worldTraitRules:
+  - min: 1
+    max: 2
+    forbiddenTags:
+      - StartWorldOnly  # start too specific
+      - GenericGeysers
+      - Oil # both are not suitable
+      - StartChange 
+      - AboveCore #that could kill player easily
+      - Crust # not for this world layout
+    forbiddenTraits:
+      - expansion1::traits/Volcanoes
+
+
+fixedTraits:
+  - sunlightLow
+  - cosmicRadiationMedLow
+
+# List all the subworld files to load
+subworldFiles:
+  - name: subworlds/acid/AcidStart
+  - name: subworlds/acid/Acid
+  - name: subworlds/space/Space
+  - name: subworlds/magma/Bottom
+  - name: expansion1::subworlds/space/HospitableSurface
+  - name: subworlds/marsh/HotMarsh
+    minCount: 2
+  - name: subworlds/oil/OilPockets
+    minCount: 3
+    maxCount: 3
+  - name: expansion1::subworlds/metallic/SwampyRenewableMetallic
+    minCount: 6
+  - name: expansion1::subworlds/marsh/med_HotMarshInactive
+    minCount: 2
+  - name: expansion1::subworlds/marsh/med_HotMarshMushrooms
+    minCount: 2
+
+    
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - subworlds/acid/Acid
+  - tagcommand: DistanceFromTag # two tall space
+    tag: AtSurface
+    minDistance: 0
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag # surface under space
+    tag: AtSurface
+    minDistance: 2 
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/space/HospitableSurface
+  - tagcommand: DistanceFromTag # general world filler 
+    tag: AtSurface
+    minDistance: 3
+    maxDistance: 99
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/metallic/SwampyRenewableMetallic
+      - expansion1::subworlds/marsh/med_HotMarshInactive
+      - expansion1::subworlds/marsh/med_HotMarshMushrooms
+      - subworlds/marsh/HotMarsh
+      - subworlds/oil/OilPockets
+
+
+ # Habitable forest
+  - tagcommand: DistanceFromTag 
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/acid/Acid
+
+# Core
+  - tagcommand: DistanceFromTag 
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - subworlds/magma/Bottom
+
+worldTemplateRules:
+  
+  # Gravitas
+  - names:
+    - expansion1::poi/warp/sender
+    - expansion1::poi/warp/receiver
+    - expansion1::poi/warp/teleporter
+    listRule: GuaranteeAll
+    priority: 90
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 3 # need to be sure it fits
+      - command: ExceptWith
+        zoneTypes: [ Space, MagmaCore, OilField ]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+
+  - names:
+    - expansion1::poi/genericGravitas/poi_office
+    listRule: GuaranteeAll
+    priority: 90
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 99
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+  
+
+  # Guaranteed gas geyser
+  - names:
+    - geysers/methane
+    listRule: GuaranteeAll
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 2
+        maxDistance: 5
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 0        
+      - command: ExceptWith
+        zoneTypes: [ Space, MagmaCore ]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+
+
+# Food for pufts
+  - names: 
+    - geysers/hot_po2
+    - geysers/slimy_po2
+    - geysers/chlorine_gas
+    listRule: TryOne
+    times: 2
+    useRelaxedFiltering: true # Allow placement in feature-heavy biomes
+    priority: 10
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning      

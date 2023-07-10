@@ -1,0 +1,208 @@
+name: STRINGS.WORLDS.SANDSTONE_FROZEN.NAME 
+description: STRINGS.WORLDS.SANDSTONE_FROZEN.DESCRIPTION
+nameTables: [ TERRA ]
+asteroidIcon: asteroid_vanilla_sandstonefrozen_kanim
+iconScale: 0.6
+
+
+worldTraitScale: 0.20 # Adjust with worldSize. Traits are tuned to base game world sizes.
+worldsize:
+  X: 228
+  Y: 123
+layoutMethod: PowerTree
+
+
+defaultsOverrides:
+  data:
+    DrawWorldBorderForce: false
+    DrawWorldBorder: true
+    WorldBorderThickness: 5
+    WorldBorderRange: 2
+    OverworldDensityMin: 18
+    OverworldDensityMax: 18
+    OverworldAvoidRadius: 5
+    OverworldSampleBehaviour: PoissonDisk
+    poiPadding: 1
+  startingWorldElements: [] # remove the algae check
+
+startSubworldName: expansion1::subworlds/sandstone/SandstoneStart
+startingBaseTemplate: expansion1::bases/warpworldSandstoneBase
+startingBasePositionHorizontal:
+  min: 0.5
+  max: 0.5
+startingBasePositionVertical:
+  min: 0.46
+  max: 0.46
+
+worldTraitRules:
+  - min: 1
+    max: 3
+    forbiddenTags:
+      - StartWorldOnly
+      - Oil
+      - LargeWorld
+      - Core 
+      - GenericGeysers
+      - Surface 
+      - AboveCore # cause worldgen failures
+
+
+forbiddenTraits:
+      - expansion1::traits/Volcanoes
+
+
+fixedTraits:
+  - sunlightVeryVeryLow
+  - cosmicRadiationMed
+
+
+# List all the subworld files to load
+subworldFiles:
+  - name: expansion1::subworlds/sandstone/SandstoneStart
+    overridePower: 6
+  - name: expansion1::subworlds/sandstone/SandstoneMiniWater
+    minCount: 1
+  - name: expansion1::subworlds/jungle/med_JungleFrozen
+  - name: subworlds/space/Space
+  - name: expansion1::subworlds/space/SpaceWithFrozenBorder
+  - name: subworlds/marsh/HotMarshSlush
+  - name: expansion1::subworlds/frozen/FrozenMedium
+  - name: expansion1::subworlds/magma/BottomSmall
+
+
+
+    
+unknownCellsAllowedSubworlds: 
+  # Fill
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/jungle/med_JungleFrozen
+      - expansion1::subworlds/frozen/FrozenMedium
+      - subworlds/marsh/HotMarshSlush
+
+  # Ring-1
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/sandstone/SandstoneMiniWater
+
+
+  # Ring-2
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/marsh/HotMarshSlush
+
+  # Ring-3
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 3
+    maxDistance: 3
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/jungle/med_JungleFrozen
+
+
+  # Space
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  # Crust
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/space/SpaceWithFrozenBorder
+
+# Core
+  - tagcommand: AtTag
+    tag: AtDepths
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/magma/BottomSmall
+
+
+worldTemplateRules:
+    # Gravitas
+  - names:
+    - expansion1::poi/warp/sender_mini
+    - expansion1::poi/warp/receiver_mini
+    listRule: GuaranteeAll
+    priority: 90
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 4
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 0        
+      - command: ExceptWith
+        zoneTypes: [ Space, MagmaCore]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+
+# Guaranteed water geyser 
+  - names:
+    - geysers/hot_water
+    listRule: GuaranteeAll
+    useRelaxedFiltering: true # Allow placement in feature-heavy biomes
+    priority: 10
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning      
+      - command: ExceptWith
+        zoneTypes: [ Sandstone ]
+
+
+  # Guaranteed sulfur geyser 
+  - names:
+    - expansion1::geysers/liquid_sulfur
+    listRule: GuaranteeAll
+    priority: 200
+    useRelaxedFiltering: true # Allow placement in feature-heavy biomes
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning      
+      - command: ExceptWith
+        zoneTypes: [ Sandstone ]
+
+# Some gas geysers 
+  - names: 
+    - geysers/chlorine_gas
+    - geysers/hot_co2
+    - geysers/methane
+    - geysers/hot_po2
+    - geysers/slimy_po2
+
+    listRule: TryOne
+    times: 2
+    useRelaxedFiltering: true # Allow placement in feature-heavy biomes
+    priority: 10
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning      
+      - command: ExceptWith
+        zoneTypes: [ Sandstone ]
+
+
+
+  

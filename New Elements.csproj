@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE0BF04C-1E09-4C59-A2B5-AEFA7E564C8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>New_Elements</RootNamespace>
+    <AssemblyName>New Elements</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Steam1\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Steam1\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Steam1\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Steam1\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PipLib">
+      <HintPath>..\..\..\Documents\Klei\OxygenNotIncluded\mods\Steam\1880615893\PipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PLib, Version=4.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PLib.4.10.0\lib\net471\PLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\Новая эпоха моддинга\Chemical Processing\bin\Debug\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plants\OilBerryConfig.cs" />
+    <Compile Include="Plants\OilBerryFruitConfig.cs" />
+    <Compile Include="Plants\ButterCupConfig.cs" />
+    <Compile Include="Plants\ButterFoodConfig.cs" />
+    <Compile Include="Plants\EyeShroomConfig.cs" />
+    <Compile Include="Plants\EyeShroomFoodConfig.cs" />
+    <Compile Include="Plants\IceMelonConfig.cs" />
+    <Compile Include="Plants\IceMelonFruitConfig.cs" />
+    <Compile Include="NonocutConfig.cs" />
+    <Compile Include="NonocutFoodConfig.cs" />
+    <Compile Include="Plants\PhosphorusGrapeConfig.cs" />
+    <Compile Include="Plants\PhosphorusGrapeFruitConfig.cs" />
+    <Compile Include="Plants\BabanaFoodConfig.cs" />
+    <Compile Include="Patches\EntitiesPatches.cs" />
+    <Compile Include="Plants\BabanaPalmConfig.cs" />
+    <Compile Include="Patches\ModStrings.cs" />
+    <Compile Include="Patches\ChemicalBurnPatches.cs" />
+    <Compile Include="SleetWeedConfig.cs" />
+    <Compile Include="SleetWeedIngridientConfig.cs" />
+    <Compile Include="SolidMinerMK1.cs" />
+    <Compile Include="ToxicityOverlay.cs" />
+    <Compile Include="Patches\ToxicityOverlayPatches.cs" />
+    <Compile Include="WireStuff\AccumulatorEntityConfig.cs" />
+    <Compile Include="Buildings\AccumulatorModuleConfig.cs" />
+    <Compile Include="Buildings\AdvancedOilWellCapConfig.cs" />
+    <Compile Include="Chemistry\AmmoniaElement.cs" />
+    <Compile Include="Buildings\Mixer_Recipes.cs" />
+    <Compile Include="Buildings\AdvancedKilnConfig.cs" />
+    <Compile Include="Buildings\AdvancedKiln_Recipes.cs" />
+    <Compile Include="Buildings\MixerConfig.cs" />
+    <Compile Include="Buildings\OilPlantConfig.cs" />
+    <Compile Include="Buildings\OilPlantRecipes.cs" />
+    <Compile Include="Buildings\ChemicalPlantConfig.cs" />
+    <Compile Include="Buildings\ChemicalPlantRecipes.cs" />
+    <Compile Include="Chemistry\HeavyOilElement.cs" />
+    <Compile Include="Chemistry\IridiumElement.cs" />
+    <Compile Include="Chemistry\NickelElement.cs" />
+    <Compile Include="Buildings\ParticleAcceleratorConfig.cs" />
+    <Compile Include="Chemistry\KatheriumAlloyElement.cs" />
+    <Compile Include="Chemistry\KatheriumElement.cs" />
+    <Compile Include="Buildings\CustomRecipes.cs" />
+    <Compile Include="Buildings\HighTempTurbineConfig.cs" />
+    <Compile Include="Buildings\MolecularResearchCenterConfig.cs" />
+    <Compile Include="WireStuff\QuantumComputerConfig.cs" />
+    <Compile Include="Patches\RocketryUtils_bySGT.cs" />
+    <Compile Include="Trashcan\NewSkillsConfig.cs" />
+    <Compile Include="WireStuff\WiresPatch.cs" />
+    <Compile Include="WireStuff\KatheriumChipConfig.cs" />
+    <Compile Include="Trashcan\KatheriumDepositConfig.cs" />
+    <Compile Include="Trashcan\DroneConfig.cs" />
+    <Compile Include="Trashcan\DroneHive.cs" />
+    <Compile Include="Buildings\DroneHiveConfig.cs" />
+    <Compile Include="Patches\Frostbite.cs" />
+    <Compile Include="Patches\FrostbitePatches.cs" />
+    <Compile Include="Trashcan\HeatGenerator.cs" />
+    <Compile Include="Patches\GameStrings.cs" />
+    <Compile Include="NewTech\NewTechs.cs" />
+    <Compile Include="NightLib\Fabricator_PortConduitDispenser.cs" />
+    <Compile Include="Patches\ElementPathes.cs" />
+    <Compile Include="Patches\ApplyExhaust.cs" />
+    <Compile Include="Patches\Buildings_Patches.cs" />
+    <Compile Include="Chemistry\FluorineElement.cs" />
+    <Compile Include="Chemistry\NitrogenDioxideElement.cs" />
+    <Compile Include="Chemistry\SulfurTrioxideElement.cs" />
+    <Compile Include="Chemistry\SulfuricAcidElement.cs" />
+    <Compile Include="Chemistry\NitricAcidElement.cs" />
+    <Compile Include="NightLib\AddBuilding.cs" />
+    <Compile Include="NightLib\BuildingCellVisualizerAccess.cs" />
+    <Compile Include="NightLib\ConduitConsumer.cs" />
+    <Compile Include="NightLib\ConduitPatches.cs" />
+    <Compile Include="NightLib\ConduitPortDisplay.cs" />
+    <Compile Include="NightLib\ConduitPortDisplayClasses.cs" />
+    <Compile Include="NightLib\ConduitPortDisplayController.cs" />
+    <Compile Include="NightLib\ConduitReadPrivate.cs" />
+    <Compile Include="NightLib\Extensions.cs" />
+    <Compile Include="NightLib\KAminControllerResize.cs" />
+    <Compile Include="NightLib\OnOverlayChange.cs" />
+    <Compile Include="Patches\ElementLoader.cs" />
+    <Compile Include="Patches\Elements.cs" />
+    <Compile Include="Chemistry\NitrogenElement.cs" />
+    <Compile Include="Patches\PipedOptionalExhaust.cs" />
+    <Compile Include="Patches\SaveGame.cs" />
+    <Compile Include="Patches\Util.cs" />
+    <Compile Include="Patches\SimHashes.cs" />
+    <Compile Include="Patches\ElementUtil.cs" />
+    <Compile Include="Chemistry\PolymerResinElement.cs" />
+    <Compile Include="NightLib\SavegameUnsafe\PortConduitDispenserBase.cs" />
+    <Compile Include="NightLib\PortConduitDispenser.cs" />
+    <Compile Include="Chemistry\PlutoniumElement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Chemistry\RubberElement.cs" />
+    <Compile Include="Patches\TechUtils.cs" />
+    <Compile Include="Trashcan\SpaceDestinationNew.cs" />
+    <Compile Include="Patches\SpacePOIConfig.cs" />
+    <Compile Include="Trashcan\Strom.cs" />
+    <Compile Include="WireStuff\SuperConductorTransformerConfig.cs" />
+    <Compile Include="WireStuff\SuperConductorWireTinyBridgeConfig.cs" />
+    <Compile Include="WireStuff\SuperConductorWireTinyConfig.cs" />
+    <Compile Include="WireStuff\SuperConductorWireThiccConfig.cs" />
+    <Compile Include="WireStuff\SuperConductorWireThiccBridgeConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="elements\chemicals.yaml" />
+    <None Include="packages.config" />
+    <None Include="templates\poi\poi_testdesert_fossil_spiral.yaml" />
+    <None Include="templates\poi\poi_testdesert_frag_reservoir.yaml" />
+    <None Include="templates\poi\poi_testdesert_oasis.yaml" />
+    <None Include="templates\poi\poi_testdesert_oasis_geyser.yaml" />
+    <None Include="templates\poi\poi_testdesert_snake_room.yaml" />
+    <None Include="worldgen\biomes\acid\Acid.yaml" />
+    <None Include="worldgen\clusters\TestStartCluster.yaml" />
+    <None Include="worldgen\noise\subworldAcid.yaml" />
+    <None Include="worldgen\noise\subworldTestDesert.yaml" />
+    <None Include="worldgen\subworlds\acid\Acid.yaml" />
+    <None Include="worldgen\subworlds\acid\AcidStart.yaml" />
+    <None Include="worldgen\worlds\TestStart.yaml" />
+    <None Include="worldgen\worlds\TestWarpPlanet.yaml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
